@@ -1,0 +1,115 @@
+*{
+    font-family: calibri;
+}
+body{
+    margin: 0%;
+    padding: 0%;
+}
+#container{
+    border: 1px solid black;
+    width:25%;
+    margin: auto;
+    margin-top: 05%;
+    height: 65vh;
+    background: #c1c4cd;
+    box-shadow: 20px 20px 30px #c1c4cd;
+}
+#title{
+    display: flex;
+    margin: 4% 0% 0% 2%;
+}
+#title span{
+    margin: 0% 0% 0% 4%;
+    font-weight: 400;
+    font-size: 150%;
+}
+#title svg{
+    margin: 1% 0% 0% 0%;
+}
+#screens {
+    box-sizing: border-box;
+    height: 20%;
+    text-align: right;
+    margin: 1% 0% 1% 0%;
+}
+#screens p:nth-child(1){
+    height: 35%;
+    font-size: 200%;
+    margin: 0% 3% 0% 3%;
+}
+#screens p:nth-child(2){
+    height: 65%;
+    margin: 0% 3% 0% 3%;
+    font-size: 350%;
+}
+#buttons{
+    width: 100%;
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+#buttons div{
+    margin: 0%;
+    width: 100%;
+    
+    box-sizing: border-box;
+}
+#buttons #pri{
+    width: 100%;
+}
+#pri{
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0.5% 1% 0% 1%;
+    padding: 0% 1.5% 0% 1.5%;
+}
+#pri button{
+    margin: 2% 0% 0%;
+    padding: 0%;
+    width: 4.6rem;
+    height: 2rem;
+    font-size: 100%;
+    box-sizing: border-box;
+    border: 0px;
+}
+.pri{
+    background: #c1c4cd;
+}
+#main{
+    width: 100%;
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    
+}
+#main div{
+    margin: 0% 0% 0% 1.7%;
+}
+.num{
+    background: #f2f3f5;
+}
+.main:hover{
+    background: gray;
+}
+.op{
+    background: #d8dadf;
+}
+.art:hover{
+    background: #1DA1F2;;
+}
+.eq:hover{
+    background: #F9BB96;
+}
+.b:hover{
+    border: 1px solid gray!important;
+}
+#main button{
+    width: 7rem;
+    height: 4rem;
+    font-size: 150%;
+    margin: 0% 0% 0.5% 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    border: 0ch;
+
+}
