@@ -12,8 +12,9 @@
     <!-- <div contenteditable=""></div> -->
     <div id="container">
         <div id="title">
-            <svg style="height: 22px" viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false"
-                class="style-scope yt-icon" style="pointer-events: none; display: inline; width: 100%; height: 100%;">
+            <svg onclick="side1()" id="svg1" style="height: 22px" viewBox="0 0 24 24"
+                preserveAspectRatio="xMidYMid meet" focusable="false" class="style-scope yt-icon"
+                style="pointer-events: none; display: inline; width: 100%; height: 100%;">
                 <g class="style-scope yt-icon">
                     <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z" class="style-scope yt-icon"></path>
                 </g>
@@ -21,8 +22,8 @@
             <span>Standard</span>
         </div>
         <div id="screens">
-            <p id="smallscreen">sola</p>
-            <p id="bigscreen">Tola</p>
+            <p id="smallscreen"></p>
+            <p id="bigscreen">0</p>
         </div>
         <div id="buttons">
             <div id="pri">
@@ -35,40 +36,125 @@
             </div>
             <div id="main">
                 <div>
-                    <button class="op main">%</button>
-                    <button class="op main">&Sqrt;</button>
-                    <button class="op main" style="padding-bottom: 0.3rem;">x<sup>2</sup></button>
-                    <button class="op main"><sup>1</sup>/<sub>x</sub></button>
+                    <button id="" value="" class="op main">%</button>
+                    <button id="" value="" class="op main" onclick="sq()">&Sqrt;</button>
+                    <button id="" value="" class="op main" style="padding-bottom: 0.3rem;"
+                        onclick="pow()">x<sup>2</sup></button>
+                    <button id="" value="" class="op main" onclick="inverse()"><sup>1</sup>/<sub>x</sub></button>
                 </div>
                 <div>
-                    <button class="op main">CE</button>
-                    <button class="op main">c</button>
-                    <button class="op main">del</button>
-                    <button class="op art">/</button>
+                    <button id="" value="" class="op main" onclick="screenClear()">CE</button>
+                    <button id="" value="" class="op main" onclick="allClear()">C</button>
+                    <button id="" value="" class="op main" onclick="del()">&lArr;</button>
+                    <button id="" value="" class="op art" onclick="opera('/')">&divide;</button>
                 </div>
                 <div>
-                    <button class="num main">7</button>
-                    <button class="num main">8</button>
-                    <button class="num main">9</button>
-                    <button class="op art">*</button>
+                    <button value="7" class="num main" onclick="buttonShow(7)">7</button>
+                    <button value="8" class="num main" onclick="buttonShow(8)">8</button>
+                    <button value="9" class="num main" onclick="buttonShow(9)">9</button>
+                    <button value="" class="op art" onclick="opera('*')">&Cross;</button>
                 </div>
                 <div>
-                    <button class="num main">4</button>
-                    <button class="num main">5</button>
-                    <button class="num main">6</button>
-                    <button class="op art">-</button>
+                    <button value="4" class="num main" onclick="buttonShow(4)">4</button>
+                    <button value="5" class="num main" onclick="buttonShow(5)">5</button>
+                    <button value="6" class="num main" onclick="buttonShow(6)">6</button>
+                    <button value="" class="op art" onclick="opera('-')">&minus;</button>
                 </div>
                 <div>
-                    <button class="num main">1</button>
-                    <button class="num main">2</button>
-                    <button class="num main">3</button>
-                    <button class="op art">+</button>
+                    <button value="1" class="num main" onclick="buttonShow(1)">1</button>
+                    <button value="2" class="num main" onclick="buttonShow(2)">2</button>
+                    <button value="3" class="num main" onclick="buttonShow(3)">3</button>
+                    <button id="" value="" class="op art" onclick="opera('+')">&plus;</button>
                 </div>
                 <div>
-                    <button class="op main"><sup>+</sup><sub>-</sub></button>
-                    <button class="num main">0</button>
-                    <button class="op main">.</button>
-                    <button class="op eq">=</button>
+                    <button id="" value="" class="op main" onclick="buttonShow('-')">&PlusMinus;</button>
+                    <button value="0" class="num main" onclick="buttonShow(0)">0</button>
+                    <button id="" value="" class="op main" onclick="buttonShow('.')">.</button>
+                    <button id="" value="" class="op eq" onclick="result()">&equals;</button>
+                </div>
+            </div>
+        </div>
+        <div id="sidenav">
+            <svg onclick="side2()" style="height: 22px" viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet"
+                focusable="false" class="style-scope yt-icon"
+                style="pointer-events: none; display: inline; width: 100%; height: 100%;">
+                <g class="style-scope yt-icon">
+                    <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z" class="style-scope yt-icon"></path>
+                </g>
+            </svg>
+            <p>
+                <b>Calculator</b>
+            </p>
+            <div onclick="showStandard()">Standard</div>
+            <div onclick="showSci()">Scientific</div>
+            <div>Programmer</div>
+            <div>Date Calculation</div>
+        </div>
+        <div id="scientific">
+            <div id="scip">
+                <div id="pri">
+                    <button class="pri main">DEG</button>
+                    <button id="hyp" class="pri main" onclick="anCh()">HYP</button>
+                    <button class="pri main">F-E</button>
+                </div>
+                <div id="pri">
+                    <button class="pri">MC</button>
+                    <button class="pri">MR</button>
+                    <button class="pri main">M+</button>
+                    <button class="pri main">M-</button>
+                    <button class="pri b">MS</button>
+                    <button class="pri b">M</button>
+                </div>
+            </div>
+            <div id="sci">
+                <div>
+                    <button id="pow2" onclick="pow()" class="op main" style="padding-bottom: 0.3rem;">x<sup>2</sup></button>
+                    <button id="powy" onclick="opera('**')" class="op main" style="padding-bottom: 0.3rem;">x<sup>y</sup></button>
+                    <button id="sin" onclick="aSin()" class="op main">sin</button>
+                    <button id="cos" onclick="aCos()" class="op main">cos</button>
+                    <button id="tan" onclick="aTan()" class="op main">tan</button>
+                </div>
+                <div>
+                    <button id="sqr" onclick="sq()" class="op main">&Sqrt;</button>
+                    <button id="tenx" onclick="tenP()" class="op main" style="padding-bottom: 0.3rem;">10<sup>x</sup></button>
+                    <button id="log" onclick="myLog()" class="op main">log</button>
+                    <button id="exp" class="op main">Exp</button>
+                    <button id="mod" onclick="opera('mod')" class="op main">Mod</button>
+                </div>
+                <div>
+                    <button id="more" class="op main" onclick="moreB()">&uArr;</button>
+                    <button class="op main" onclick="screenClear()">CE</button>
+                    <button class="op main" onclick="allClear()">C</button>
+                    <button class="op main" onclick="del()">&lArr;</button>
+                    <button class="op art" onclick="opera('/')">&divide;</button>
+                </div>
+                <div>
+                    <button onclick="myPi()" class="op main">&pi;</button>
+                    <button class="num main" onclick="buttonShow(7)">7</button>
+                    <button class="num main" onclick="buttonShow(8)">8</button>
+                    <button class="num main" onclick="buttonShow(9)">9</button>
+                    <button class="op art" onclick="opera('*')">&Cross;</button>
+                </div>
+                <div>
+                    <button class="op main" onclick="fac()">n&excl;</button>
+                    <button class="num main" onclick="buttonShow(4)">4</button>
+                    <button class="num main" onclick="buttonShow(5)">5</button>
+                    <button class="num main" onclick="buttonShow(6)">6</button>
+                    <button class="op art" onclick="opera('-')">&minus;</button>
+                </div>
+                <div>
+                    <button class="op main" onclick="buttonShow('-')">&PlusMinus;</button>
+                    <button class="num main" onclick="buttonShow(1)">1</button>
+                    <button class="num main" onclick="buttonShow(2)">2</button>
+                    <button class="num main" onclick="buttonShow(3)">3</button>
+                    <button class="op art" onclick="opera('+')">&plus;</button>
+                </div>
+                <div>
+                    <button class="op main">(</button>
+                    <button class="op main">)</button>
+                    <button class="num main" onclick="buttonShow(0)">0</button>
+                    <button class="op main" onclick="buttonShow('.')">.</button>
+                    <button class="op eq" onclick="result()">&equals;</button>
                 </div>
             </div>
         </div>

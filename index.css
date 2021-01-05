@@ -1,16 +1,17 @@
 *{
     font-family: calibri;
+    outline: none;
 }
 body{
     margin: 0%;
     padding: 0%;
 }
 #container{
-    border: 1px solid black;
-    width:25%;
+    border: 1px solid #8b8d95;
+    width:480px;
     margin: auto;
     margin-top: 05%;
-    height: 65vh;
+    height: 72vh;
     background: #c1c4cd;
     box-shadow: 20px 20px 30px #c1c4cd;
 }
@@ -23,7 +24,7 @@ body{
     font-weight: 400;
     font-size: 150%;
 }
-#title svg{
+#svg1{
     margin: 1% 0% 0% 0%;
 }
 #screens {
@@ -71,6 +72,7 @@ body{
     font-size: 100%;
     box-sizing: border-box;
     border: 0px;
+    /* display: none; */
 }
 .pri{
     background: #c1c4cd;
@@ -111,5 +113,74 @@ body{
     padding: 0%;
     box-sizing: border-box;
     border: 0ch;
-
+    /* display: none; */
+}
+#sidenav{
+    position: fixed;
+    bottom: 75vh;
+    display: none;
+    background: rgb(241, 238, 238);
+    width: 250px;
+    /* font-family: calibri; */
+    /* padding-left: 10px; */
+}
+#sidenav svg{
+    padding-left: 8px;
+}
+#sidenav p{
+    padding-left: 8px;
+    margin-bottom: 5px;
+}
+#sidenav div{
+    padding-left: 18px;
+    margin-bottom: 5px;
+}
+#sidenav div:hover{
+    padding-left: 23px;
+    background: #1DA1F2;
+}
+#scientific{
+    position: relative;
+    bottom: 50vh;
+    right: 2px;
+    padding-top: 1.5%;
+    display: none;
+}
+#scip{
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0.5% 1% 0% 1%;
+    padding: 0% 1.5% 0% 1.5%;
+}
+#scip #pri{
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0% 0% 0% 0%;
+    padding: 0% 0% 0% 0.6%;
+    /* border: 1px solid red; */
+}
+#scip button{
+    margin: 2% 0% 0%;
+    padding: 0%;
+    width: 4.5rem;
+    height: 2rem;
+    font-size: 100%;
+    box-sizing: border-box;
+    border: 0px;
+}
+#sci{
+    width: 100%;
+    margin: 0% 0% 0.5% 2.4%;
+    padding: 0%;
+    box-sizing: border-box;
+    /* border: 1px solid red; */
+}
+#sci button{
+    width: 5.5rem;
+    height: 3rem;
+    font-size: 110%;
+    margin: 0% 0% 0.2% 0.1%;
+    padding: 0%;
+    box-sizing: border-box;
+    border: 0ch;
 }
