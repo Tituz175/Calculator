@@ -72,7 +72,6 @@ body{
     font-size: 100%;
     box-sizing: border-box;
     border: 0px;
-    /* display: none; */
 }
 .pri{
     background: #c1c4cd;
@@ -82,7 +81,6 @@ body{
     margin: 0%;
     padding: 0%;
     box-sizing: border-box;
-    
 }
 #main div{
     margin: 0% 0% 0% 1.7%;
@@ -113,7 +111,6 @@ body{
     padding: 0%;
     box-sizing: border-box;
     border: 0ch;
-    /* display: none; */
 }
 #sidenav{
     position: fixed;
@@ -121,8 +118,6 @@ body{
     display: none;
     background: rgb(241, 238, 238);
     width: 250px;
-    /* font-family: calibri; */
-    /* padding-left: 10px; */
 }
 #sidenav svg{
     padding-left: 8px;
@@ -157,7 +152,6 @@ body{
     box-sizing: border-box;
     margin: 0% 0% 0% 0%;
     padding: 0% 0% 0% 0.6%;
-    /* border: 1px solid red; */
 }
 #scip button{
     margin: 2% 0% 0%;
@@ -173,7 +167,6 @@ body{
     margin: 0% 0% 0.5% 2.4%;
     padding: 0%;
     box-sizing: border-box;
-    /* border: 1px solid red; */
 }
 #sci button{
     width: 5.5rem;
@@ -183,4 +176,58 @@ body{
     padding: 0%;
     box-sizing: border-box;
     border: 0ch;
+}
+
+@media screen and (max-width:968px) {
+    #container{
+        width:350px;
+        height: 67vh;
+    }
+    #main div{
+        margin: 0% 2.5% 0% 2.5%;
+    }
+    #main button{
+        width: 5rem;
+        height: 3.5rem;
+        font-size: 120%;
+    }
+    #pri{
+        width: 100%;
+        box-sizing: border-box;
+        margin: 0.5% 1% 0% 1%;
+        padding: 0% 3% 0% 3%;
+    }
+    #pri button{
+        margin: 2% 0% 0%;
+        padding: 0%;
+        width: 3.2rem;
+        height: 2rem;
+        font-size: 90%;
+    }
+    #sidenav{
+        z-index: 1;
+    }
+    #sidenav p{
+        font-size: 15px
+    }
+    #sidenav div{
+        font-size: 15px
+    }
+    #scip button{
+        margin: 2% 0% 0%;
+        padding: 0%;
+        width: 3.2rem;
+        font-size: 90%;
+    }
+    #sci button{
+        width: 4rem;
+        height: 2.9rem;
+        font-size: 90%;
+    }
+    #title span{
+        margin: 0% 0% 0% 4%;
+        font-weight: 200;
+        font-size: 130%;
+    }
+    
 }

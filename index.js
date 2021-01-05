@@ -53,7 +53,6 @@ function opera(i) {
     }
     actStatus = true;
     num1 = parseFloat(document.getElementById("bigscreen").innerHTML);
-    // console.log(num1);
     document.querySelector("#smallscreen").innerHTML += (document.getElementById("bigscreen").innerHTML);
     document.querySelector("#smallscreen").innerHTML += sign;
     document.querySelector("#bigscreen").innerHTML = ""
@@ -75,7 +74,6 @@ function buttonShow(i) {
     if (i === "." || i === "-") {
         num = i;
         var sign = document.querySelector("#bigscreen").innerHTML;
-        // console.log(sign);
         if (i === "-") {
             var out = sign.search('-');
             if (sign.length = 1) {
@@ -141,7 +139,6 @@ function result() {
 
 function pow() {
     num1 = parseInt(document.getElementById("bigscreen").innerHTML);
-    // console.log(num1 ** 2);
     var but = document.getElementById("pow2");
     if (but.innerHTML == "x<sup>3</sup>") {
         document.getElementById("bigscreen").innerHTML = num1 ** 3;
@@ -438,8 +435,3 @@ function fac() {
     document.getElementById("bigscreen").innerHTML = out;
     document.getElementById("smallscreen").innerHTML = info;
 }
-// console.log(Math.exp(2));
-var a = 2;
-var b = 16;
-var c = b ** (1 / a);
-console.log(c);
