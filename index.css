@@ -182,6 +182,7 @@ body{
     #container{
         width:350px;
         height: 67vh;
+        box-shadow: 7px 7px 10px #c1c4cd;
     }
     #main div{
         margin: 0% 2.5% 0% 2.5%;
