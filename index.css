@@ -113,8 +113,8 @@ body{
     border: 0ch;
 }
 #sidenav{
-    position: fixed;
-    bottom: 75vh;
+    position: absolute;
+    bottom: 68vh;
     display: none;
     background: rgb(241, 238, 238);
     width: 250px;
@@ -181,11 +181,11 @@ body{
 @media screen and (max-width:968px) {
     #container{
         width:350px;
-        height: 100vh;
+        height: 70vh;
         box-shadow: 7px 7px 10px #c1c4cd;
     }
     #main div{
-        margin: 0% 2.5% 0% 2.5%;
+        margin: 1% 2.5% 0% 2.5%;
     }
     #main button{
         width: 5rem;
@@ -207,6 +207,8 @@ body{
     }
     #sidenav{
         z-index: 1;
+        position: absolute;
+        bottom: 75vh;
     }
     #sidenav p{
         font-size: 15px
