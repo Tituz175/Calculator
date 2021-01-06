@@ -9,11 +9,12 @@ var actStatus;
 var verse;
 var moreBstatus;
 var anChstatus;
-var tes = NaN;
+var nav;
 
 function side1() {
     document.getElementById("sidenav").style.display = "block";
     document.getElementById("title").style.visibility = "hidden";
+    nav = true;
 }
 
 function side2() {
