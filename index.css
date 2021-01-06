@@ -207,8 +207,7 @@ body{
     }
     #sidenav{
         z-index: 1;
-        position: sticky;
-        top: 15px;
+        position: fixed;
     }
     #sidenav p{
         font-size: 15px
