@@ -13,7 +13,8 @@ body{
     margin-top: 05%;
     height: 72vh;
     background: #c1c4cd;
-    box-shadow: 20px 20px 30px #c1c4cd;
+    box-shadow: 0px 0px 20px #717277;
+    border-radius: 10px;
 }
 #title{
     display: flex;
@@ -111,6 +112,7 @@ body{
     padding: 0%;
     box-sizing: border-box;
     border: 0ch;
+    border-radius: 7px;
 }
 #sidenav{
     position: absolute;
@@ -182,7 +184,7 @@ body{
     #container{
         width:350px;
         /* height: 100vh; */
-        box-shadow: 7px 7px 10px #c1c4cd;
+        box-shadow: 0px 0px 10px #717277;
     }
     #main div{
         margin: 1% 2.5% 0% 2.5%;
