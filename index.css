@@ -181,7 +181,7 @@ body{
 @media screen and (max-width:968px) {
     #container{
         width:350px;
-        height: 100vh;
+        height: 80vh;
         box-shadow: 7px 7px 10px #c1c4cd;
     }
     #main div{
@@ -207,7 +207,8 @@ body{
     }
     #sidenav{
         z-index: 1;
-        position: fixed;
+        position: sticky;
+        top: 15px;
     }
     #sidenav p{
         font-size: 15px
