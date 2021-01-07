@@ -122,19 +122,23 @@ function result() {
         var but = document.getElementById("powy");
         console.log("working 1");
         console.log(but);
-        // if (but.innerHTML == "<sup>y</sup>&Sqrt;<sub>x</sub>") {
-        //     console.log("working");
-        // } 
-        // else {
-        //     ans = num1 ** num2;
-        // }
+        ans = num1 ** num2;
     } else if (act === "mod") {
         ans = num1 % num2;
     } else if (act === "**" && document.getElementById("powy").innerHTML == `<sup>y</sup>&Sqrt;<sub>x</sub>`) {
         console.log("working");
     }
     if (!num2) {
-        ans = 0;
+        if (act === "-") {
+            ans = num1 - num1;
+        }
+        else if (act === "+") {
+            ans = num1 + num1;
+        } else if (act === "*") {
+            ans = num1 * num1;
+        } else {
+            ans = num1 / num1;
+        }
     }
     console.log(ans);
     document.querySelector("#smallscreen").innerHTML = "";
