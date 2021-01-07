@@ -13,7 +13,7 @@ body{
     margin-top: 05%;
     height: 72vh;
     background: #c1c4cd;
-    box-shadow: 0px 0px 20px #717277;
+    box-shadow: inset 0px 0px 12px #717277;
     border-radius: 10px;
 }
 #title{
@@ -33,6 +33,8 @@ body{
     height: 20%;
     text-align: right;
     margin: 1% 0% 1% 0%;
+    border-radius: 10px;
+    border: 2px solid rgb(0, 0, 0, 0.15);
 }
 #screens p:nth-child(1){
     height: 35%;
@@ -114,6 +116,7 @@ body{
     box-sizing: border-box;
     border: 0ch;
     border-radius: 7px;
+    box-shadow: inset 0px 0px 5px #7b7c81;
 }
 #sidenav{
     position: absolute;
@@ -121,7 +124,6 @@ body{
     display: none;
     background: rgb(241, 238, 238);
     width: 250px;
-    /* box-shadow: 5px 3px 10px #C9C9C9; */
     border-radius: 5px;
     border: 1px solid rgb(0, 0, 0, 0.2);
 }
@@ -156,7 +158,7 @@ body{
 #scip{
     width: 100%;
     box-sizing: border-box;
-    margin: 0.5% 1% 0% 1%;
+    margin: 0% 1% 0% 1%;
     padding: 0% 1.5% 0% 1.5%;
 }
 #scip #pri{
@@ -177,7 +179,7 @@ body{
 }
 #sci{
     width: 100%;
-    margin: 0% 0% 0.5% 2.4%;
+    margin: 01% 0% 0.5% 2.4%;
     padding: 0%;
     box-sizing: border-box;
 }
@@ -190,13 +192,13 @@ body{
     box-sizing: border-box;
     border: 0ch;
     border-radius: 7px;
+    box-shadow: inset 0px 0px 5px #7b7c81;
 }
 
 @media screen and (max-width:968px) {
     #container{
         width:350px;
-        /* height: 100vh; */
-        box-shadow: 0px 0px 10px #717277;
+        box-shadow: inset 0px 0px 10px #717277;
     }
     #main div{
         margin: 1% 2.5% 0% 2.5%;
