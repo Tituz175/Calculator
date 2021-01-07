@@ -74,8 +74,10 @@ function buttonShow(i) {
         sc.innerHTML = "";
         resultClear = false;
     }
-    if (sc.innerHTML === "0") {
-        sc.innerHTML = "";
+    if (i != 0) {
+        if (sc.innerHTML === "0") {
+            sc.innerHTML = "";
+        }
     }
     if (i === "." || i === "-") {
         num = i;
@@ -93,19 +95,28 @@ function buttonShow(i) {
                 }
             }
         }
-        if (figure.indexOf("+") != -1) {
-            document.getElementById("bigscreen").innerHTML = "";
-            var ot = figure.replace("+", "-");
-            document.getElementById("bigscreen").innerHTML += ot;
-        } else {
-            if (figure.indexOf("-") == -1) {
+        if (num == "-" || num == "+") {
+            if (figure.indexOf("+") != -1) {
                 document.getElementById("bigscreen").innerHTML = "";
-                document.getElementById("bigscreen").innerHTML = num;
-                document.getElementById("bigscreen").innerHTML += figure;
-            } else {
-                document.getElementById("bigscreen").innerHTML = "";
-                var ot = figure.replace("-", "+");
+                var ot = figure.replace("+", "-");
                 document.getElementById("bigscreen").innerHTML += ot;
+            } else {
+                if (figure.indexOf("-") == -1) {
+                    document.getElementById("bigscreen").innerHTML = "";
+                    document.getElementById("bigscreen").innerHTML = num;
+                    document.getElementById("bigscreen").innerHTML += figure;
+                } else {
+                    document.getElementById("bigscreen").innerHTML = "";
+                    var ot = figure.replace("-", "+");
+                    document.getElementById("bigscreen").innerHTML += ot;
+                }
+            }
+        } else {
+            if (document.getElementById("bigscreen").innerHTML == 0) {
+                document.getElementById("bigscreen").innerHTML = 0;
+                document.getElementById("bigscreen").innerHTML += num;
+            } else {
+                document.getElementById("bigscreen").innerHTML += num;
             }
         }
 
@@ -332,10 +343,17 @@ function aSin() {
     var but = document.getElementById("sin");
     var out;
     if (but.innerHTML == "sin") {
-        out = Math.sin(num1 * Math.PI / 180);
-        document.getElementById("bigscreen").innerHTML = out;
-        var info = `sin<sub>0</sub>(${num1})`;
-        document.getElementById("smallscreen").innerHTML = info;
+        if (phChange == "rad") {
+            out = Math.sin(num1);
+            document.getElementById("bigscreen").innerHTML = out;
+            var info = `sin<sub>r</sub>(${num1})`;
+            document.getElementById("smallscreen").innerHTML = info;
+        } else {
+            out = Math.sin(num1 * Math.PI / 180);
+            document.getElementById("bigscreen").innerHTML = out;
+            var info = `sin<sub>0</sub>(${num1})`;
+            document.getElementById("smallscreen").innerHTML = info;
+        }
     }
     else if (but.innerHTML == "sinh") {
         out = Math.sinh(num1);
@@ -362,13 +380,23 @@ function aCos() {
     var but = document.getElementById("cos");
     var out;
     if (but.innerHTML == "cos") {
-        out = Math.sin((90 - num1) * Math.PI / 180);
-        if (out.length == undefined) {
-            document.getElementById("bigscreen").style.fontSize = "280%"
+        if (phChange == "rad") {
+            out = Math.cos(num1);
+            if (out.length == undefined) {
+                document.getElementById("bigscreen").style.fontSize = "280%"
+            }
+            document.getElementById("bigscreen").innerHTML = out;
+            var info = `cos<sub>r</sub>(${num1})`;
+            document.getElementById("smallscreen").innerHTML = info;
+        } else {
+            out = Math.sin((90 - num1) * Math.PI / 180);
+            if (out.length == undefined) {
+                document.getElementById("bigscreen").style.fontSize = "280%"
+            }
+            document.getElementById("bigscreen").innerHTML = out;
+            var info = `cos<sub>0</sub>(${num1})`;
+            document.getElementById("smallscreen").innerHTML = info;
         }
-        document.getElementById("bigscreen").innerHTML = out;
-        var info = `cos<sub>0</sub>(${num1})`;
-        document.getElementById("smallscreen").innerHTML = info;
     } else if (but.innerHTML == "cosh") {
         out = Math.cosh(num1);
         if (out.length == undefined) {
@@ -385,14 +413,25 @@ function aTan() {
     var but = document.getElementById("tan");
     var out;
     if (but.innerHTML == "tan") {
-        out = Math.ceil(Math.tan(num1 * Math.PI / 180));
-        if (out.length == undefined) {
-            document.getElementById("bigscreen").style.fontSize = "280%"
-            out = "Invalid input";
+        if (phChange == "rad") {
+            out = Math.ceil(Math.tan(num1));
+            if (out.length == undefined) {
+                document.getElementById("bigscreen").style.fontSize = "280%"
+                out = "Invalid input";
+            }
+            document.getElementById("bigscreen").innerHTML = out;
+            var info = `tan<sub>r</sub>(${num1})`;
+            document.getElementById("smallscreen").innerHTML = info;
+        } else {
+            out = Math.ceil(Math.tan(num1 * Math.PI / 180));
+            if (out.length == undefined) {
+                document.getElementById("bigscreen").style.fontSize = "280%"
+                out = "Invalid input";
+            }
+            document.getElementById("bigscreen").innerHTML = out;
+            var info = `tan<sub>0</sub>(${num1})`;
+            document.getElementById("smallscreen").innerHTML = info;
         }
-        document.getElementById("bigscreen").innerHTML = out;
-        var info = `tan<sub>0</sub>(${num1})`;
-        document.getElementById("smallscreen").innerHTML = info;
     } else if (but.innerHTML == "tanh") {
         out = Math.tanh(num1);
         // if (out.length == undefined) {
