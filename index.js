@@ -28,6 +28,8 @@ function showSci() {
     document.getElementById("scientific").style.display = "block";
     document.querySelector("#title span").innerHTML = "Scientific";
     document.getElementById("title").style.visibility = "visible";
+    document.getElementById("bigscreen").innerHTML = 0;
+    document.getElementById("smallscreen").innerHTML = "";
 }
 
 function showStandard() {
@@ -36,6 +38,8 @@ function showStandard() {
     document.getElementById("buttons").style.visibility = "visible";
     document.querySelector("#title span").innerHTML = "Standard";
     document.getElementById("title").style.visibility = "visible";
+    document.getElementById("bigscreen").innerHTML = 0;
+    document.getElementById("smallscreen").innerHTML = "";
 }
 
 function opera(i) {
