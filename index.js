@@ -78,6 +78,7 @@ function buttonShow(i) {
     }
     if (i === "." || i === "-") {
         num = i;
+        var figure = document.querySelector("#bigscreen").innerHTML;
         var sign = document.querySelector("#bigscreen").innerHTML;
         if (i === "-") {
             var out = sign.search('-');
@@ -91,7 +92,22 @@ function buttonShow(i) {
                 }
             }
         }
-        document.querySelector("#bigscreen").append(num);
+        if (figure.indexOf("+") != -1) {
+            document.getElementById("bigscreen").innerHTML = "";
+            var ot = figure.replace("+", "-");
+            document.getElementById("bigscreen").innerHTML += ot;
+        } else {
+            if (figure.indexOf("-") == -1) {
+                document.getElementById("bigscreen").innerHTML = "";
+                document.getElementById("bigscreen").innerHTML = num;
+                document.getElementById("bigscreen").innerHTML += figure;
+            } else {
+                document.getElementById("bigscreen").innerHTML = "";
+                var ot = figure.replace("-", "+");
+                document.getElementById("bigscreen").innerHTML += ot;
+            }
+        }
+
     } else {
         num = parseInt(i)
         document.querySelector("#bigscreen").append(num)
