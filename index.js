@@ -217,6 +217,12 @@ function del() {
     document.getElementById("bigscreen").innerHTML = so;
 }
 
+function perc() {
+    num1 = parseInt(document.getElementById("bigscreen").innerHTML);
+    var out = num1 / 100;
+    document.getElementById("bigscreen").innerHTML = out;
+}
+
 // scientific functions
 
 function anCh() {
