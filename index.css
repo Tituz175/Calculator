@@ -73,6 +73,7 @@ body{
     font-size: 100%;
     box-sizing: border-box;
     border: 0px;
+    border-radius: 3px;
 }
 .pri{
     background: #c1c4cd;
@@ -163,6 +164,7 @@ body{
     font-size: 100%;
     box-sizing: border-box;
     border: 0px;
+    border-radius: 3px;
 }
 #sci{
     width: 100%;
@@ -178,6 +180,7 @@ body{
     padding: 0%;
     box-sizing: border-box;
     border: 0ch;
+    border-radius: 7px;
 }
 
 @media screen and (max-width:968px) {
