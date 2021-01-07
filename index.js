@@ -10,6 +10,7 @@ var verse;
 var moreBstatus;
 var anChstatus;
 var nav;
+var phChange;
 
 function side1() {
     document.getElementById("sidenav").style.display = "block";
@@ -465,4 +466,18 @@ function fac() {
     var info = `fact(${num1})`;
     document.getElementById("bigscreen").innerHTML = out;
     document.getElementById("smallscreen").innerHTML = info;
+}
+
+function phCh() {
+    var button = document.getElementById("ph").innerHTML;
+    if (button == "DEG") {
+        document.getElementById("ph").innerHTML = "RAD";
+        phChange = "rad";
+    } else if (button == "RAD") {
+        document.getElementById("ph").innerHTML = "GRAD";
+        phChange = "grad";
+    } else {
+        document.getElementById("ph").innerHTML = "DEG";
+        phChange = "deg";
+    }
 }
