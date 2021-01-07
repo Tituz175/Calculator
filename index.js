@@ -81,6 +81,7 @@ function buttonShow(i) {
     if (resultClear == true || actStatus == false) {
         sc.innerHTML = "";
         resultClear = false;
+        actStatus = true;
     }
     if (i != 0) {
         if (sc.innerHTML === "0") {
@@ -194,6 +195,9 @@ function pow() {
         var info = `sqr(${num1})`;
         document.getElementById("smallscreen").innerHTML = info;
     }
+    verse = true;
+    resultClear = true;
+    actStatus = false;
 }
 
 function sq() {
@@ -387,6 +391,9 @@ function aSin() {
     // else {
 
     // }
+    verse = true;
+    resultClear = true;
+    actStatus = false;
 }
 
 function aCos() {
@@ -420,6 +427,9 @@ function aCos() {
         var info = `cosh(${num1})`
         document.getElementById("smallscreen").innerHTML = info;
     }
+    verse = true;
+    resultClear = true;
+    actStatus = false;
 }
 
 function aTan() {
@@ -455,6 +465,9 @@ function aTan() {
         var info = `tanh(${num1})`
         document.getElementById("smallscreen").innerHTML = info;
     }
+    verse = true;
+    resultClear = true;
+    actStatus = false;
 }
 
 function tenP() {
@@ -474,6 +487,9 @@ function tenP() {
         document.getElementById("bigscreen").innerHTML = out;
         document.getElementById("smallscreen").innerHTML = info;
     }
+    verse = true;
+    resultClear = true;
+    actStatus = false;
 }
 
 function myLog() {
@@ -502,11 +518,17 @@ function myLog() {
         document.getElementById("bigscreen").innerHTML = out;
         document.getElementById("smallscreen").innerHTML = info;
     }
+    verse = true;
+    resultClear = true;
+    actStatus = false;
 }
 
 function myPi() {
     var out = Math.PI;
     document.getElementById("bigscreen").innerHTML = out;
+    verse = true;
+    resultClear = true;
+    actStatus = false;
 }
 
 function fac() {
@@ -519,6 +541,9 @@ function fac() {
     var info = `fact(${num1})`;
     document.getElementById("bigscreen").innerHTML = out;
     document.getElementById("smallscreen").innerHTML = info;
+    verse = true;
+    resultClear = true;
+    actStatus = false;
 }
 
 function phCh() {
