@@ -144,7 +144,7 @@ body{
     font-size: 18px;
     font-weight: 600;
     color: #fba776;
-    text-shadow: 2px 2px 2px black;
+    text-shadow: 2px 2px 2px rgb(0, 0, 0, 0.8);
 }
 #scientific{
     position: relative;
