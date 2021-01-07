@@ -59,9 +59,17 @@ function opera(i) {
     }
     actStatus = true;
     num1 = parseFloat(document.getElementById("bigscreen").innerHTML);
-    document.querySelector("#smallscreen").innerHTML += (document.getElementById("bigscreen").innerHTML);
-    document.querySelector("#smallscreen").innerHTML += sign;
-    document.querySelector("#bigscreen").innerHTML = ""
+    if (verse == true) {
+        document.querySelector("#smallscreen").innerHTML = "";
+        document.querySelector("#smallscreen").innerHTML += (document.getElementById("bigscreen").innerHTML);
+        document.querySelector("#smallscreen").innerHTML += sign;
+        document.querySelector("#bigscreen").innerHTML = ""
+        verse = false;
+    } else {
+        document.querySelector("#smallscreen").innerHTML += (document.getElementById("bigscreen").innerHTML);
+        document.querySelector("#smallscreen").innerHTML += sign;
+        document.querySelector("#bigscreen").innerHTML = ""
+    }
 }
 
 function buttonShow(i) {
@@ -201,7 +209,10 @@ function sq() {
             document.getElementById("bigscreen").innerHTML = Math.sqrt(num1);
             document.getElementById("smallscreen").innerHTML = "&Sqrt;(" + num1 + ")";
         }
+        verse = true;
     }
+    resultClear = true;
+    actStatus = false;
 }
 
 function inverse() {
@@ -249,6 +260,9 @@ function perc() {
     num1 = parseInt(document.getElementById("bigscreen").innerHTML);
     var out = num1 / 100;
     document.getElementById("bigscreen").innerHTML = out;
+    verse = true;
+    resultClear = true;
+    actStatus = false;
 }
 
 // scientific functions
