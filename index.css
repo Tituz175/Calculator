@@ -126,6 +126,7 @@ body{
     width: 250px;
     border-radius: 5px;
     border: 1px solid rgb(0, 0, 0, 0.2);
+    z-index: 1;
 }
 #sidenav svg{
     padding-left: 8px;

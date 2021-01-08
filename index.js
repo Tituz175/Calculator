@@ -43,6 +43,20 @@ function showStandard() {
     document.getElementById("smallscreen").innerHTML = "";
 }
 
+function chLen() {
+    var total = document.getElementById("bigscreen").innerHTML
+    if (total.length > 20) {
+        var go = document.getElementById("bigscreen").innerHTML;
+        document.getElementById("bigscreen").innerHTML = go.slice(0, -1)
+    } else if (total.length <= 15 && total.length > 10) {
+        document.getElementById("bigscreen").style.fontSize = "300%"
+    } else if (total.length > 15)  {
+        document.getElementById("bigscreen").style.fontSize = "250%"
+    } else if (total.length <= 10) {
+        document.getElementById("bigscreen").style.fontSize = "350%"
+    }
+}
+
 function opera(i) {
     act = i
     var sign
@@ -133,6 +147,7 @@ function buttonShow(i) {
         num = parseInt(i)
         document.querySelector("#bigscreen").append(num)
     }
+    chLen()
 }
 
 function result() {
@@ -258,6 +273,7 @@ function del() {
         }
     }
     document.getElementById("bigscreen").innerHTML = so;
+    chLen()
 }
 
 function perc() {
