@@ -45,15 +45,29 @@ function showStandard() {
 
 function chLen() {
     var total = document.getElementById("bigscreen").innerHTML
-    if (total.length > 20) {
-        var go = document.getElementById("bigscreen").innerHTML;
-        document.getElementById("bigscreen").innerHTML = go.slice(0, -1)
-    } else if (total.length <= 15 && total.length > 10) {
-        document.getElementById("bigscreen").style.fontSize = "300%"
-    } else if (total.length > 15)  {
-        document.getElementById("bigscreen").style.fontSize = "250%"
-    } else if (total.length <= 10) {
-        document.getElementById("bigscreen").style.fontSize = "350%"
+    if (screen.width < "968px") {
+        console.log("working");
+        if (total.length > 15) {
+            var go = document.getElementById("bigscreen").innerHTML;
+            document.getElementById("bigscreen").innerHTML = go.slice(0, -1)
+        } else if (total.length <= 8 && total.length > 5) {
+            document.getElementById("bigscreen").style.fontSize = "300%"
+        } else if (total.length > 8) {
+            document.getElementById("bigscreen").style.fontSize = "250%"
+        } else if (total.length <= 5) {
+            document.getElementById("bigscreen").style.fontSize = "350%"
+        }
+    } else {
+        if (total.length > 20) {
+            var go = document.getElementById("bigscreen").innerHTML;
+            document.getElementById("bigscreen").innerHTML = go.slice(0, -1)
+        } else if (total.length <= 15 && total.length > 10) {
+            document.getElementById("bigscreen").style.fontSize = "300%"
+        } else if (total.length > 15) {
+            document.getElementById("bigscreen").style.fontSize = "250%"
+        } else if (total.length <= 10) {
+            document.getElementById("bigscreen").style.fontSize = "350%"
+        }
     }
 }
 
