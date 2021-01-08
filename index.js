@@ -11,6 +11,7 @@ var moreBstatus;
 var anChstatus;
 var nav;
 var phChange;
+var signActive;
 
 function side1() {
     document.getElementById("sidenav").style.display = "block";
@@ -50,7 +51,7 @@ function chLen() {
         document.getElementById("bigscreen").innerHTML = go.slice(0, -1)
     } else if (total.length <= 14 && total.length > 8) {
         document.getElementById("bigscreen").style.fontSize = "270%"
-    } else if (total.length > 14)  {
+    } else if (total.length > 14) {
         document.getElementById("bigscreen").style.fontSize = "230%"
     } else if (total.length <= 8) {
         document.getElementById("bigscreen").style.fontSize = "350%"
@@ -62,12 +63,13 @@ function opera(i) {
     var sign
     if (act == "-") {
         sign = "<span>&minus;</span>";
+        signActive = true;
     } else if (act == "*") {
-        sign = "<span>&Cross;</spa>";
+        sign = "<span>&Cross;</span>";
     } else if (act == "/") {
-        sign = "<span>&divide;</spa>";
+        sign = "<span>&divide;</span>";
     } else if (act == "+") {
-        sign = "<span>&plus;</spa>";
+        sign = "<span>&plus;</span>";
     } else if (act == "mod") {
         sign = " Mod "
     }
@@ -147,6 +149,7 @@ function buttonShow(i) {
         num = parseInt(i)
         document.querySelector("#bigscreen").append(num)
     }
+    // signActive = false;
     chLen()
 }
 

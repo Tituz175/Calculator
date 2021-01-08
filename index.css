@@ -195,6 +195,12 @@ body{
     border-radius: 7px;
     box-shadow: inset 0px 0px 5px #7b7c81;
 }
+#copy{
+    margin-top: 10px;
+    font-size: 45px;
+    margin-left: 30px;
+    color: rgb(0, 0, 0, 0.5);
+}
 
 @media screen and (max-width:968px) {
     #container{
@@ -248,5 +254,10 @@ body{
         font-weight: 200;
         font-size: 130%;
     }
-    
+    #copy{
+        margin-top: 10px;
+        font-size: 30px;
+        margin-left: 30px;
+        color: rgb(0, 0, 0, 0.5);
+    }
 }
